@@ -27,23 +27,19 @@ public class SnakeFrame extends JFrame {
                 switch( keyCode ) {
                     case KeyEvent.VK_UP:
                         // handle up
-                        snakePanel.getShape().moveUp();
-                        snakePanel.repaint();
+                        snakePanel.moveUp();
                         break;
                     case KeyEvent.VK_DOWN:
                         // handle down
-                        snakePanel.getShape().moveDown();
-                        snakePanel.repaint();
+                        snakePanel.moveDown();
                         break;
                     case KeyEvent.VK_LEFT:
                         // handle left
-                        snakePanel.getShape().moveLeft();
-                        snakePanel.repaint();
+                        snakePanel.moveLeft();
                         break;
                     case KeyEvent.VK_RIGHT :
                         // handle right
-                        snakePanel.getShape().moveRight();
-                        snakePanel.repaint();
+                        snakePanel.moveRight();
                         break;
                 }
             }
@@ -59,6 +55,11 @@ public class SnakeFrame extends JFrame {
         setLocation(400,400);
         setVisible(true);
 
+        Timer timer = new Timer(500,(event)->{
+            snakePanel.moveSnake();
+            snakePanel.repaint();
+        });
+        timer.start();
     }
     private SnakePanel snakePanel ;
 

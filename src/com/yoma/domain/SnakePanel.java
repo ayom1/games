@@ -38,4 +38,37 @@ public class SnakePanel extends JPanel {
     public void setShape(Shape shape) {
         this.shape = shape;
     }
+
+    public void moveUp() {
+        shape.moveUp();
+        this.repaint();
+    }
+
+    public void moveDown() {
+        shape.moveDown();
+        this.repaint();
+    }
+
+    public void moveLeft() {
+        shape.moveLeft();
+        this.repaint();
+    }
+
+    public void moveRight() {
+        shape.moveRight();
+        this.repaint();
+    }
+
+    public void moveSnake() {
+        ShapeItem shapeItem = shape.getItems().get(0);
+        if(shapeItem.getDirection().ordinal() == Direction.UP.ordinal()){
+            this.moveUp();
+        }else if(shapeItem.getDirection().ordinal() == Direction.DOWN.ordinal()){
+            this.moveDown();
+        }else if(shapeItem.getDirection().ordinal() == Direction.RIGHT.ordinal()){
+            this.moveRight();
+        }else if(shapeItem.getDirection().ordinal() == Direction.LEFT.ordinal()){
+            this.moveLeft();
+        }
+    }
 }
