@@ -2,8 +2,11 @@ package com.yoma.domain;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class SnakePanel extends JPanel {
+
+    private final static int UNIT = 5;
 
     public SnakePanel(){
         shape = new Shape();
@@ -17,14 +20,19 @@ public class SnakePanel extends JPanel {
     public void paint(Graphics graphics){
         graphics.setColor(Color.WHITE);
         graphics.fillRect(0, 0, getWidth(), getHeight());
-        shape.getItems().forEach(
-                item -> {
-                    System.out.println(""+item.getX()+" "+item.getY()+" "+item.getDirection());
-                    graphics.setColor(Color.RED);
-                    graphics.drawRect(item.getX(),item.getY(),5,5);
-//                    graphics.drawLine(item.getX(),item.getY(),item.getX(),0);
-                }
-        );
+        List<ShapeItem> items = shape.getItems();
+        ShapeItem item = null;
+        for (int i=0;i<items.size();i++){
+            item = items.get(i);
+            //System.out.println(""+item.getX()+" "+item.getY()+" "+item.getDirection());
+            if(i==0){
+                graphics.setColor(Color.GREEN);
+                graphics.fillRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
+            }else {
+                graphics.setColor(Color.RED);
+                graphics.fillRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
+            }
+        }
 
 //        graphics.fillRect(20, 20, 100, 200);
     }
