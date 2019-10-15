@@ -9,12 +9,10 @@ public class SnakePanel extends JPanel {
     private final static int UNIT = 5;
 
     public SnakePanel(){
-        shape = new Shape();
-        shape.getItems().add(new ShapeItem(220,100,Direction.RIGHT));
-        shape.getItems().add(new ShapeItem(215,100,Direction.RIGHT));
-        shape.getItems().add(new ShapeItem(210,100,Direction.RIGHT));
-        shape.getItems().add(new ShapeItem(205,100,Direction.RIGHT));
-        shape.getItems().add(new ShapeItem(200,100,Direction.RIGHT));
+        shape = SnakeBuilder.initShape();
+        rat = SnakeBuilder.initRat();
+        System.out.println(rat.getX());
+        System.out.println(rat.getY());
     }
 
     public void paint(Graphics graphics){
@@ -32,6 +30,8 @@ public class SnakePanel extends JPanel {
                 graphics.setColor(Color.RED);
                 graphics.fillRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
             }
+            graphics.setColor(Color.BLUE);
+            graphics.fillRect(rat.getX(), rat.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
         }
 
 //        graphics.fillRect(20, 20, 100, 200);
@@ -46,6 +46,8 @@ public class SnakePanel extends JPanel {
     public void setShape(Shape shape) {
         this.shape = shape;
     }
+
+    private Rat rat;
 
     public void moveUp() {
         shape.moveUp();
@@ -78,5 +80,13 @@ public class SnakePanel extends JPanel {
         }else if(shapeItem.getDirection().ordinal() == Direction.LEFT.ordinal()){
             this.moveLeft();
         }
+    }
+
+    public Rat getRat() {
+        return rat;
+    }
+
+    public void setRat(Rat rat) {
+        this.rat = rat;
     }
 }

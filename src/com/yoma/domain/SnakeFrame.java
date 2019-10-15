@@ -49,17 +49,31 @@ public class SnakeFrame extends JFrame {
 
             }
         });
-        setContentPane(snakePanel);
+        JPanel main = new JPanel();
+        JPanel up = new JPanel ();
+
+        //adjust size and set layout
+        //setPreferredSize (new Dimension (400, 432));
+        GridLayout layout = new GridLayout(2, 1, 0, 0);
+        main.setLayout (layout);
+        up.setSize(400,100);
+        snakePanel.setSize(400,200);
+        //add components
+        main.add (up);
+        main.add (snakePanel);
+
+        setContentPane(main);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 400);
+        setSize(400, 422);
         setLocation(400,400);
         setVisible(true);
-
+        setResizable(false);
         Timer timer = new Timer(500,(event)->{
             snakePanel.moveSnake();
             snakePanel.repaint();
         });
         timer.start();
+        System.out.println(snakePanel.getSize());
     }
     private SnakePanel snakePanel ;
 
