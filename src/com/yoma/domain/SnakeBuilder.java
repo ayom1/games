@@ -14,6 +14,8 @@ public class SnakeBuilder {
         shape.getItems().add(new ShapeItem(210,100,Direction.RIGHT));
         shape.getItems().add(new ShapeItem(205,100,Direction.RIGHT));
         shape.getItems().add(new ShapeItem(200,100,Direction.RIGHT));
+        // should be removed from the major list
+        // that is how we do not need to check if the rat appeared in any snake's shape item
         return shape;
     }
 
