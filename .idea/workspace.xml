@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c495a3c5-0f05-4d2a-bb8c-63971dc92287" name="Default" comment="create Builder and Rat&#10;also divide panels but need enhancement">
+    <list default="true" id="c495a3c5-0f05-4d2a-bb8c-63971dc92287" name="Default" comment="add the increase of snake by eating the rat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/SnakeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/domain/SnakeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/SnakePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/domain/SnakePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakePanel.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,13 +23,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1122" />
-          <entry key="txt" value="64" />
+          <entry key="txt" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1122" />
-          <entry key="PLAIN_TEXT" value="64" />
+          <entry key="PLAIN_TEXT" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yoma/domain/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="72" column="113" selection-start-line="72" selection-start-column="113" selection-end-line="72" selection-end-column="113" />
+            <state relative-caret-position="239">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#117#118#0" expanded="true" />
@@ -243,7 +239,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571248683380" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571248848035" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -340,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571246253306</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add the increase of snake by eating the rat">
+      <created>1571248802505</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571248802505</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -381,7 +384,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create Builder and Rat&#10;also divide panels but need enhancement" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Builder and Rat&#10;also divide panels but need enhancement" />
+    <MESSAGE value="add the increase of snake by eating the rat" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the increase of snake by eating the rat" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/yoma/domain/CursorButton.java" />
@@ -478,8 +482,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yoma/domain/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="72" column="113" selection-start-line="72" selection-start-column="113" selection-end-line="72" selection-end-column="113" />
+        <state relative-caret-position="239">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#117#118#0" expanded="true" />

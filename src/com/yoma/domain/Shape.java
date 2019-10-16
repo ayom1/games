@@ -25,7 +25,6 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX(),snakePanel.getRat().getY()-5,Direction.UP);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
-                snakePanel.repaint();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.UP);
@@ -41,7 +40,6 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX(),snakePanel.getRat().getY()+5,Direction.DOWN);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
-                snakePanel.repaint();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.DOWN);
@@ -57,7 +55,6 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX()-5,snakePanel.getRat().getY(),Direction.LEFT);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
-                snakePanel.repaint();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.LEFT);
@@ -73,7 +70,6 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX()+5,snakePanel.getRat().getY(),Direction.RIGHT);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
-                snakePanel.repaint();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.RIGHT);
