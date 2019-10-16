@@ -10,7 +10,7 @@ public class SnakePanel extends JPanel {
 
     public SnakePanel(){
         shape = SnakeBuilder.initShape();
-        rat = SnakeBuilder.initRat();
+        rat = SnakeBuilder.initRat(shape.getItems());
         System.out.println(rat.getX());
         System.out.println(rat.getY());
     }
@@ -18,6 +18,8 @@ public class SnakePanel extends JPanel {
     public void paint(Graphics graphics){
         graphics.setColor(Color.WHITE);
         graphics.fillRect(0, 0, getWidth(), getHeight());
+        graphics.setColor(Color.BLUE);
+        graphics.fillRect(rat.getX(), rat.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
         List<ShapeItem> items = shape.getItems();
         ShapeItem item = null;
         for (int i=0;i<items.size();i++){
@@ -30,8 +32,6 @@ public class SnakePanel extends JPanel {
                 graphics.setColor(Color.RED);
                 graphics.fillRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
             }
-            graphics.setColor(Color.BLUE);
-            graphics.fillRect(rat.getX(), rat.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
         }
 
 //        graphics.fillRect(20, 20, 100, 200);
@@ -50,22 +50,22 @@ public class SnakePanel extends JPanel {
     private Rat rat;
 
     public void moveUp() {
-        shape.moveUp();
+        shape.moveUp(this);
         this.repaint();
     }
 
     public void moveDown() {
-        shape.moveDown();
+        shape.moveDown(this);
         this.repaint();
     }
 
     public void moveLeft() {
-        shape.moveLeft();
+        shape.moveLeft(this);
         this.repaint();
     }
 
     public void moveRight() {
-        shape.moveRight();
+        shape.moveRight(this);
         this.repaint();
     }
 

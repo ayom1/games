@@ -17,40 +17,69 @@ public class Shape {
         this.items = items;
     }
 
-    public void moveUp() {
+    public void moveUp(SnakePanel snakePanel) {
         ShapeItem shapeItem = items.get(0);
         if(shapeItem.getDirection().ordinal()!=Direction.DOWN.ordinal()) {
-            this.copyElements();
-            shapeItem.setDirection(Direction.UP);
-            shapeItem.setX(shapeItem.getX());
-            shapeItem.setY(shapeItem.getY() - 5);
+            // detect collision
+            if(snakePanel.getRat().getX()==shapeItem.getX()&&snakePanel.getRat().getY()==shapeItem.getY()){
+                shapeItem = new ShapeItem(snakePanel.getRat().getX(),snakePanel.getRat().getY()-5,Direction.UP);
+                items.add(0,shapeItem);
+                snakePanel.setRat(SnakeBuilder.initRat(items));
+                snakePanel.repaint();
+            }else {
+                this.copyElements();
+                shapeItem.setDirection(Direction.UP);
+                shapeItem.setX(shapeItem.getX());
+                shapeItem.setY(shapeItem.getY() - 5);
+            }
         }
     }
-    public void moveDown() {
+    public void moveDown(SnakePanel snakePanel) {
         ShapeItem shapeItem = items.get(0);
         if(shapeItem.getDirection().ordinal()!=Direction.UP.ordinal()) {
-            this.copyElements();
-            shapeItem.setDirection(Direction.DOWN);
-            shapeItem.setX(shapeItem.getX());
-            shapeItem.setY(shapeItem.getY() + 5);
+            if(snakePanel.getRat().getX()==shapeItem.getX()&&snakePanel.getRat().getY()==shapeItem.getY()){
+                shapeItem = new ShapeItem(snakePanel.getRat().getX(),snakePanel.getRat().getY()+5,Direction.DOWN);
+                items.add(0,shapeItem);
+                snakePanel.setRat(SnakeBuilder.initRat(items));
+                snakePanel.repaint();
+            }else {
+                this.copyElements();
+                shapeItem.setDirection(Direction.DOWN);
+                shapeItem.setX(shapeItem.getX());
+                shapeItem.setY(shapeItem.getY() + 5);
+            }
         }
     }
-    public void moveLeft() {
+    public void moveLeft(SnakePanel snakePanel) {
         ShapeItem shapeItem = items.get(0);
         if(shapeItem.getDirection().ordinal()!=Direction.RIGHT.ordinal()) {
-            this.copyElements();
-            shapeItem.setDirection(Direction.LEFT);
-            shapeItem.setX(shapeItem.getX() - 5);
-            shapeItem.setY(shapeItem.getY());
+            if(snakePanel.getRat().getX()==shapeItem.getX()&&snakePanel.getRat().getY()==shapeItem.getY()){
+                shapeItem = new ShapeItem(snakePanel.getRat().getX()-5,snakePanel.getRat().getY(),Direction.LEFT);
+                items.add(0,shapeItem);
+                snakePanel.setRat(SnakeBuilder.initRat(items));
+                snakePanel.repaint();
+            }else {
+                this.copyElements();
+                shapeItem.setDirection(Direction.LEFT);
+                shapeItem.setX(shapeItem.getX() - 5);
+                shapeItem.setY(shapeItem.getY());
+            }
         }
     }
-    public void moveRight() {
+    public void moveRight(SnakePanel snakePanel) {
         ShapeItem shapeItem = items.get(0);
         if(shapeItem.getDirection().ordinal()!=Direction.LEFT.ordinal()) {
-            this.copyElements();
-            shapeItem.setDirection(Direction.RIGHT);
-            shapeItem.setX(shapeItem.getX() + 5);
-            shapeItem.setY(shapeItem.getY());
+            if(snakePanel.getRat().getX()==shapeItem.getX()&&snakePanel.getRat().getY()==shapeItem.getY()){
+                shapeItem = new ShapeItem(snakePanel.getRat().getX()+5,snakePanel.getRat().getY(),Direction.RIGHT);
+                items.add(0,shapeItem);
+                snakePanel.setRat(SnakeBuilder.initRat(items));
+                snakePanel.repaint();
+            }else {
+                this.copyElements();
+                shapeItem.setDirection(Direction.RIGHT);
+                shapeItem.setX(shapeItem.getX() + 5);
+                shapeItem.setY(shapeItem.getY());
+            }
         }
     }
     void copyElements(){

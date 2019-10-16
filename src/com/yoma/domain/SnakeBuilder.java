@@ -1,6 +1,7 @@
 package com.yoma.domain;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class SnakeBuilder {
@@ -19,19 +20,26 @@ public class SnakeBuilder {
         return shape;
     }
 
-    public static List<ShapeItem> generateAllShapeItems(){
+    public static List<ShapeItem> generateAllShapeItems(List<ShapeItem> shapeItems){
         List<ShapeItem> items = new ArrayList<>();
         for (int i =0;i<X;i+=UNIT){
             for (int j=0;j<Y;j+=UNIT) {
-                ShapeItem shapeItem = new ShapeItem(i,j,Direction.RIGHT);
-                items.add(shapeItem);
+                for (int k=0;k<shapeItems.size();k++) {
+                    if(shapeItems.get(k).getX()!=i
+                            && shapeItems.get(k).getY()!=j) {
+                        ShapeItem shapeItem = new ShapeItem(i, j, Direction.RIGHT);
+                        items.add(shapeItem);
+                    }
+                }
             }
         }
+
         return items;
     }
 
-    public static Rat initRat() {
-        List<ShapeItem> items = generateAllShapeItems();
+    public static Rat initRat(List<ShapeItem> shapeItems) {
+        List<ShapeItem> items = generateAllShapeItems(shapeItems);
+
         Rat rat = new Rat();
         int slot = (int) (Math.random()*items.size());
         rat.setX(items.get(slot).getX());
