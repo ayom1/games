@@ -70,7 +70,6 @@ public class SnakeFrame extends JFrame {
         setResizable(false);
         Timer timer = new Timer(500,(event)->{
             snakePanel.moveSnake();
-            snakePanel.repaint();
         });
         timer.start();
         System.out.println(snakePanel.getSize());

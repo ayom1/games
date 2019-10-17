@@ -78,6 +78,8 @@ public class SnakePanel extends JPanel {
     }
 
     public void moveSnake() {
+        if(this.isCrashed())
+            return;
         ShapeItem shapeItem = shape.getItems().get(0);
         if(shapeItem.getDirection().ordinal() == Direction.UP.ordinal()){
             this.moveUp();
