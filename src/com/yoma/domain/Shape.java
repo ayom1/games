@@ -1,5 +1,13 @@
 package com.yoma.domain;
 
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +24,25 @@ public class Shape {
     public void setItems(List<ShapeItem> items) {
         this.items = items;
     }
-
+    public static final String SOUND_FILENAME = "/resources/food.wav";
+    private void playSound()
+    {
+        new Thread(new Runnable() {
+            // The wrapper thread is unnecessary, unless it blocks on the
+            // Clip finishing; see comments.
+            public void run() {
+                try {
+                    Clip clip = AudioSystem.getClip();
+                    AudioInputStream inputStream = AudioSystem.getAudioInputStream(
+                            Shape.class.getResourceAsStream(SOUND_FILENAME));
+                    clip.open(inputStream);
+                    clip.start();
+                } catch (Exception e) {
+                    System.err.println(e.getMessage());
+                }
+            }
+        }).start();
+    }
     public void moveUp(SnakePanel snakePanel) {
         ShapeItem shapeItem = items.get(0);
         if(shapeItem.getDirection().ordinal()!=Direction.DOWN.ordinal()) {
@@ -25,6 +51,7 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX(),snakePanel.getRat().getY()-5,Direction.UP);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
+                this.playSound();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.UP);
@@ -43,6 +70,7 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX(),snakePanel.getRat().getY()+5,Direction.DOWN);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
+                this.playSound();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.DOWN);
@@ -61,6 +89,7 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX()-5,snakePanel.getRat().getY(),Direction.LEFT);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
+                this.playSound();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.LEFT);
@@ -79,6 +108,8 @@ public class Shape {
                 shapeItem = new ShapeItem(snakePanel.getRat().getX()+5,snakePanel.getRat().getY(),Direction.RIGHT);
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
+                this.playSound();
+
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.RIGHT);
