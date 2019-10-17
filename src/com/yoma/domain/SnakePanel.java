@@ -11,8 +11,7 @@ public class SnakePanel extends JPanel {
     public SnakePanel(){
         shape = SnakeBuilder.initShape();
         rat = SnakeBuilder.initRat(shape.getItems());
-        System.out.println(rat.getX());
-        System.out.println(rat.getY());
+
     }
 
     public void paint(Graphics graphics){

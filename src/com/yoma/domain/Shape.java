@@ -31,6 +31,9 @@ public class Shape {
                 shapeItem.setX(shapeItem.getX());
                 shapeItem.setY(shapeItem.getY() - 5);
             }
+            if(shapeItem.getY()==0) {
+                shapeItem.setY(SnakeBuilder.Y-5);
+            }
         }
     }
     public void moveDown(SnakePanel snakePanel) {
@@ -45,6 +48,9 @@ public class Shape {
                 shapeItem.setDirection(Direction.DOWN);
                 shapeItem.setX(shapeItem.getX());
                 shapeItem.setY(shapeItem.getY() + 5);
+            }
+            if(shapeItem.getY()==SnakeBuilder.Y) {
+                shapeItem.setY(5);
             }
         }
     }
@@ -61,6 +67,9 @@ public class Shape {
                 shapeItem.setX(shapeItem.getX() - 5);
                 shapeItem.setY(shapeItem.getY());
             }
+            if(shapeItem.getX()==0) {
+                shapeItem.setX(SnakeBuilder.X-5);
+            }
         }
     }
     public void moveRight(SnakePanel snakePanel) {
@@ -75,6 +84,9 @@ public class Shape {
                 shapeItem.setDirection(Direction.RIGHT);
                 shapeItem.setX(shapeItem.getX() + 5);
                 shapeItem.setY(shapeItem.getY());
+            }
+            if(shapeItem.getX()==SnakeBuilder.X) {
+                shapeItem.setX(5);
             }
         }
     }

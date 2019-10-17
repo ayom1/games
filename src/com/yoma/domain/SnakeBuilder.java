@@ -44,6 +44,8 @@ public class SnakeBuilder {
         int slot = (int) (Math.random()*items.size());
         rat.setX(items.get(slot).getX());
         rat.setY(items.get(slot).getY());
+        System.out.println(rat.getX());
+        System.out.println(rat.getY());
         return rat;
     }
 
