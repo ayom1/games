@@ -15,6 +15,9 @@ public class SnakePanel extends JPanel {
     }
 
     public void paint(Graphics graphics){
+        if(this.crashed){
+            return;
+        }
         graphics.setColor(Color.WHITE);
         graphics.fillRect(0, 0, getWidth(), getHeight());
         graphics.setColor(Color.BLUE);
@@ -32,7 +35,11 @@ public class SnakePanel extends JPanel {
                 graphics.fillRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
             }
         }
-
+        if(this.detectCollision(shape.getItems())){
+            graphics.setColor(Color.BLACK);
+            graphics.fill3DRect(0,0,20,20,true);
+            this.crashed = true;
+        }
 //        graphics.fillRect(20, 20, 100, 200);
     }
 
@@ -47,6 +54,8 @@ public class SnakePanel extends JPanel {
     }
 
     private Rat rat;
+
+    private boolean crashed;
 
     public void moveUp() {
         shape.moveUp(this);
@@ -87,5 +96,24 @@ public class SnakePanel extends JPanel {
 
     public void setRat(Rat rat) {
         this.rat = rat;
+    }
+
+    private boolean detectCollision(List<ShapeItem> items) {
+        ShapeItem firstItem = items.get(0);
+        for (int i=1;i<items.size();i++){
+            if(firstItem.getX()==items.get(i).getX()
+                    && firstItem.getY()==items.get(i).getY()){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isCrashed() {
+        return crashed;
+    }
+
+    public void setCrashed(boolean crashed) {
+        this.crashed = crashed;
     }
 }
