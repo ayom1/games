@@ -70,6 +70,7 @@ public class Shape {
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
                 this.playSound();
+                snakePanel.raiseScore();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.DOWN);
@@ -89,6 +90,7 @@ public class Shape {
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
                 this.playSound();
+                snakePanel.raiseScore();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.LEFT);
@@ -108,6 +110,7 @@ public class Shape {
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
                 this.playSound();
+                snakePanel.raiseScore();
 
             }else {
                 this.copyElements();

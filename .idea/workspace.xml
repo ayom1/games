@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c495a3c5-0f05-4d2a-bb8c-63971dc92287" name="Default" comment="enhance the edge calculation">
+    <list default="true" id="c495a3c5-0f05-4d2a-bb8c-63971dc92287" name="Default" comment="enhance the edge calculation&#10;add stop and play action">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/Shape.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,14 +29,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1662" />
-          <entry key="txt" value="281" />
+          <entry key="java" value="1726" />
+          <entry key="txt" value="319" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1662" />
-          <entry key="PLAIN_TEXT" value="281" />
+          <entry key="JAVA" value="1726" />
+          <entry key="PLAIN_TEXT" value="319" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yoma/domain/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+            <state relative-caret-position="273">
+              <caret line="32" column="54" lean-forward="true" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#356#357#0" expanded="true" />
@@ -80,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="149" column="32" lean-forward="true" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
+            <state relative-caret-position="109">
+              <caret line="135" column="31" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#813#902#0" expanded="true" />
@@ -91,19 +92,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/awt/event/KeyEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="189" column="28" lean-forward="true" selection-start-line="189" selection-start-column="28" selection-end-line="189" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+            <state relative-caret-position="173">
+              <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#659#748#0" expanded="true" />
@@ -197,8 +189,9 @@
       <find>spinner1</find>
       <find>rasi</find>
       <find>spine</find>
-      <find>cr</find>
       <find>space</find>
+      <find>cr</find>
+      <find>raiseScore</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/com/yoma/shape</dir>
@@ -221,9 +214,9 @@
         <option value="$PROJECT_DIR$/src/com/yoma/Main.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/domain/SnakeFrameOne.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/domain/SnakeBuilder.java" />
-        <option value="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" />
-        <option value="$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java" />
+        <option value="$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" />
       </list>
     </option>
   </component>
@@ -285,7 +278,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572108271826" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572110567891" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -452,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572103328878</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="enhance the edge calculation&#10;add stop and play action">
+      <created>1572108302270</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572108302270</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -500,7 +500,8 @@
     <MESSAGE value="fix crash snake issue and draw the head last!" />
     <MESSAGE value="add score" />
     <MESSAGE value="enhance the edge calculation" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhance the edge calculation" />
+    <MESSAGE value="enhance the edge calculation&#10;add stop and play action" />
+    <option name="LAST_COMMIT_MESSAGE" value="enhance the edge calculation&#10;add stop and play action" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -617,18 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yoma/domain/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/awt/event/KeyEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -638,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="149" column="32" lean-forward="true" selection-start-line="149" selection-start-column="32" selection-end-line="149" selection-end-column="32" />
+        <state relative-caret-position="109">
+          <caret line="135" column="31" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#813#902#0" expanded="true" />
@@ -649,8 +638,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+        <state relative-caret-position="173">
+          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#659#748#0" expanded="true" />
@@ -676,6 +665,18 @@
             <element signature="e#5028#5029#0" expanded="true" />
             <element signature="e#5125#5126#0" expanded="true" />
             <element signature="e#5158#5159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yoma/domain/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="32" column="54" lean-forward="true" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
           </folding>
         </state>
       </provider>

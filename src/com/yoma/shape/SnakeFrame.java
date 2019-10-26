@@ -119,6 +119,7 @@ public class SnakeFrame extends javax.swing.JFrame {
         pack();
         Timer timer = new Timer(500,(event)->{
             newJPanel1.moveSnake();
+            jLabel2.setText(""+this.newJPanel1.getScore());
         });
         timer.start();
     }// </editor-fold>//GEN-END:initComponents
@@ -150,6 +151,7 @@ public class SnakeFrame extends javax.swing.JFrame {
                 newJPanel1.stopOrPlay();
                 break;
         }
+        System.out.println(newJPanel1.getScore());
         this.jLabel2.setText(""+newJPanel1.getScore());
     }//GEN-LAST:event_newJPanel1KeyTyped
 

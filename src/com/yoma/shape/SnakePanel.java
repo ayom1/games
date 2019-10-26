@@ -65,12 +65,10 @@ public class SnakePanel extends javax.swing.JPanel {
         if (this.crashed || this.stop) {
             return;
         }
-        System.out.println(getWidth());
-        System.out.println(getHeight());
         graphics.setColor(Color.YELLOW);
         graphics.fillRect(0, 0, getWidth(), getHeight());
         graphics.setColor(Color.BLUE);
-        graphics.fillRect(rat.getX(), rat.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
+        graphics.fill3DRect(rat.getX(), rat.getY(), SnakePanel.UNIT, SnakePanel.UNIT,true);
         List<ShapeItem> items = shape.getItems();
         ShapeItem item = null;
         for (int i = items.size()-1; i >= 0; i--) {
@@ -78,10 +76,10 @@ public class SnakePanel extends javax.swing.JPanel {
             //System.out.println(""+item.getX()+" "+item.getY()+" "+item.getDirection());
             if (i == 0) {
                 graphics.setColor(Color.GREEN);
-                graphics.fillRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
+                graphics.fill3DRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT,true);
             } else {
                 graphics.setColor(Color.RED);
-                graphics.fillRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT);
+                graphics.fill3DRect(item.getX(), item.getY(), SnakePanel.UNIT, SnakePanel.UNIT,true);
             }
         }
         if (this.detectCollision(shape.getItems())) {
