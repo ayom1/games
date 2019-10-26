@@ -63,6 +63,8 @@ public class SnakePanel extends javax.swing.JPanel {
         if (this.crashed) {
             return;
         }
+        System.out.println(getWidth());
+        System.out.println(getHeight());
         graphics.setColor(Color.YELLOW);
         graphics.fillRect(0, 0, getWidth(), getHeight());
         graphics.setColor(Color.BLUE);
