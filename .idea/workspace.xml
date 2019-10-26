@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c495a3c5-0f05-4d2a-bb8c-63971dc92287" name="Default" comment="adding eating sound. must be .wav fromat">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="c495a3c5-0f05-4d2a-bb8c-63971dc92287" name="Default" comment="refactor the code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoma/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/SnakeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoma/domain/SnakeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/SnakeFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoma/domain/SnakePanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakeFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakeFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/production/SnakeGame/com/yoma/domain/SnakePanel.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,14 +25,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1343" />
-          <entry key="txt" value="173" />
+          <entry key="java" value="1373" />
+          <entry key="txt" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1343" />
-          <entry key="PLAIN_TEXT" value="173" />
+          <entry key="JAVA" value="1373" />
+          <entry key="PLAIN_TEXT" value="191" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="68">
+              <caret line="129" column="10" selection-start-line="129" selection-start-column="10" selection-end-line="129" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#813#902#0" expanded="true" />
@@ -102,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1142">
-              <caret line="90" column="18" lean-forward="true" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+            <state relative-caret-position="168">
+              <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#659#748#0" expanded="true" />
@@ -183,6 +171,8 @@
       <find>KeyCode</find>
       <find>com.yoma.domain.</find>
       <find>jSpinner1</find>
+      <find>s</find>
+      <find>spinner1</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/com/yoma/shape</dir>
@@ -203,10 +193,10 @@
         <option value="$PROJECT_DIR$/src/com/yoma/domain/SnakePanel.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/domain/SnakePanelOne.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/domain/Shape.java" />
-        <option value="$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/Main.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/domain/SnakeFrameOne.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/domain/SnakeBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java" />
         <option value="$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java" />
       </list>
     </option>
@@ -269,7 +259,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572101103121" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572101517601" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -408,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571322748711</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor the code">
+      <created>1572101125276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572101125276</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -420,7 +417,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19027181" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19027181" />
       <window_info id="Structure" order="6" weight="0.25" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5135909" side_tool="true" visible="true" weight="0.24623802" />
@@ -429,7 +426,7 @@
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.48640916" visible="true" weight="0.24623802" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.48640916" visible="true" weight="0.24623802" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -452,7 +449,8 @@
     <MESSAGE value="add the increase of snake by eating the rat" />
     <MESSAGE value="fix the repaint issue" />
     <MESSAGE value="adding eating sound. must be .wav fromat" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding eating sound. must be .wav fromat" />
+    <MESSAGE value="refactor the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor the code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/yoma/domain/CursorButton.java" />
@@ -579,8 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1142">
-          <caret line="90" column="18" lean-forward="true" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+        <state relative-caret-position="168">
+          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#659#748#0" expanded="true" />
@@ -602,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yoma/shape/SnakeFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="68">
+          <caret line="129" column="10" selection-start-line="129" selection-start-column="10" selection-end-line="129" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#813#902#0" expanded="true" />
