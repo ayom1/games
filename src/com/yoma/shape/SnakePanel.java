@@ -58,9 +58,11 @@ public class SnakePanel extends javax.swing.JPanel {
     private Shape shape;
     private Rat rat;
     private boolean crashed;
+    private boolean stop;
+
 
     public void paint(Graphics graphics) {
-        if (this.crashed) {
+        if (this.crashed || this.stop) {
             return;
         }
         System.out.println(getWidth());
@@ -110,7 +112,7 @@ public class SnakePanel extends javax.swing.JPanel {
     }
 
     public void moveSnake() {
-        if(this.isCrashed())
+        if(this.isCrashed() || this.isStop())
             return;
         ShapeItem shapeItem = shape.getItems().get(0);
         if(shapeItem.getDirection().ordinal() == Direction.UP.ordinal()){
@@ -168,8 +170,20 @@ public class SnakePanel extends javax.swing.JPanel {
         this.score = score;
     }
 
+    public boolean isStop() {
+        return stop;
+    }
+
+    public void setStop(boolean stop) {
+        this.stop = stop;
+    }
+
     public void raiseScore() {
         this.score += 5 ;
 
+    }
+
+    public void stopOrPlay() {
+        this.stop = !stop;
     }
 }

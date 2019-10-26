@@ -77,7 +77,7 @@ public class Shape {
                 shapeItem.setY(shapeItem.getY() + 5);
             }
             if(shapeItem.getY()==SnakeBuilder.Y) {
-                shapeItem.setY(5);
+                shapeItem.setY(0);
             }
         }
     }
