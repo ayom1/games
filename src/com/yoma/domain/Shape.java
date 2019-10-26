@@ -1,13 +1,11 @@
 package com.yoma.domain;
 
-import sun.audio.AudioPlayer;
-import sun.audio.AudioStream;
+
+import com.yoma.shape.SnakePanel;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 

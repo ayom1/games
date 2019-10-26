@@ -1,13 +1,12 @@
 package com.yoma.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class SnakeBuilder {
     public final static int UNIT = 5;
     public final static int X = 400;
-    public final static int Y = 200;
+    public final static int Y = 400;
     public static Shape initShape(){
         Shape shape = new Shape();
         shape.getItems().add(new ShapeItem(220,100,Direction.RIGHT));

@@ -1,6 +1,7 @@
 package com.yoma;
 
-import com.yoma.domain.SnakeFrame;
+
+import com.yoma.shape.SnakeFrame;
 
 public class Main {
 
