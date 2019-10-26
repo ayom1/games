@@ -156,4 +156,18 @@ public class SnakePanel extends javax.swing.JPanel {
     public void setCrashed(boolean crashed) {
         this.crashed = crashed;
     }
+    private int score = 0;
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void raiseScore() {
+        this.score += 5 ;
+
+    }
 }

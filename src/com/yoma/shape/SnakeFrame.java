@@ -149,6 +149,7 @@ public class SnakeFrame extends javax.swing.JFrame {
                 newJPanel1.moveRight();
                 break;
         }
+        this.jLabel2.setText(""+newJPanel1.getScore());
     }//GEN-LAST:event_newJPanel1KeyTyped
 
     

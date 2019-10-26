@@ -50,6 +50,7 @@ public class Shape {
                 items.add(0,shapeItem);
                 snakePanel.setRat(SnakeBuilder.initRat(items));
                 this.playSound();
+                snakePanel.raiseScore();
             }else {
                 this.copyElements();
                 shapeItem.setDirection(Direction.UP);
@@ -94,8 +95,8 @@ public class Shape {
                 shapeItem.setX(shapeItem.getX() - 5);
                 shapeItem.setY(shapeItem.getY());
             }
-            if(shapeItem.getX()==0) {
-                shapeItem.setX(SnakeBuilder.X-5);
+            if(shapeItem.getX()==-5) {
+                shapeItem.setX(SnakeBuilder.X);
             }
         }
     }
